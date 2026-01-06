@@ -913,6 +913,25 @@ img {
   margin-bottom: 6px;
 }
 
+.field-hint {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+.form-field input[type="date"]:not(:focus):not(:valid)::before {
+  content: attr(placeholder);
+  color: #999;
+  width: 100%;
+}
+
+.form-field input[type="date"]:focus::before,
+.form-field input[type="date"]:valid::before {
+  content: none;
+}
+
 .form-row {
   display: flex;
   gap: 15px;
@@ -929,6 +948,22 @@ img {
   font-size: 1rem;
   font-family: inherit;
   background: white;
+}
+
+.form-row input[type="date"] {
+  position: relative;
+  color: #333;
+  min-height: 48px;
+}
+
+.form-row input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.6;
+  filter: invert(0.5);
+}
+
+.form-row input[type="date"]:focus::-webkit-calendar-picker-indicator {
+  opacity: 1;
 }
 
 .form-row input:focus,
