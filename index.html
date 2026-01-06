@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Rancho Paraíso — Finca Turística</title>
+  <title>Rancho Paraíso — Finca Turística (Alquiler Completo)</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -19,7 +19,7 @@
         <a href="#inicio">Inicio</a>
         <a href="#quienes-somos">Quiénes somos</a>
         <a href="#hospedaje">Hospedaje</a>
-        <a href="#piscina">Piscinas</a>
+        <a href="#piscina">Piscina</a>
         <a href="#vistas">Vistas</a>
         <a href="#ubicacion">Ubicación</a>
         <a href="#reservas">Reservas</a>
@@ -234,8 +234,14 @@
           <input name="telefono" id="res-phone" type="tel" placeholder="Teléfono (opcional)">
         </div>
         <div class="form-row">
-          <input name="fecha-llegada" id="res-date" type="date" required>
-          <input name="fecha-salida" id="res-date-depart" type="date" required>
+          <div class="form-field">
+            <label for="res-date">Fecha de entrada *</label>
+            <input name="fecha-llegada" id="res-date" type="date" required>
+          </div>
+          <div class="form-field">
+            <label for="res-date-depart">Fecha de salida *</label>
+            <input name="fecha-salida" id="res-date-depart" type="date" required>
+          </div>
         </div>
         <div class="form-row">
           <select name="personas" id="res-guests" required>
@@ -316,6 +322,5 @@
 
   <script src="main.js"></script>
 </body>
-
 </html>
 
